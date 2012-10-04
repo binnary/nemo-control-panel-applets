@@ -1,7 +1,7 @@
 Summary: Nemo mobile control panel plugins
 Name: nemo-control-panel-applets
-Version: 0.1
-Release: 7
+Version: 0.1.1
+Release: 1
 License: GPLv2
 Group: System/System Control
 BuildArch: noarch
@@ -16,7 +16,6 @@ Nemo Mobile QML control panel applets
 %define qml_dir %{_libdir}/qt4/imports
 %define plugins_dir %{_datadir}/duicontrolpanel
 %define shortcuts_dir %{_libdir}/duicontrolpanel
-%define media_dir %{_datadir}/themes/blanco/meegotouch
 
 %prep
 %setup -q -n %{name}-%{version}
@@ -53,7 +52,6 @@ Provides: meegotouchcp-battery = 0.21.14
 %defattr(-,root,root,-)
 %{qml_dir}/org/nemomobile/controlpanel/*.qml
 %{qml_dir}/org/nemomobile/controlpanel/qmldir
-%{media_dir}/icons/*.svg
 
 %files -n nemo-control-panel-applet-power
 %defattr(-,root,root,-)
