@@ -3,10 +3,11 @@ Name: nemo-control-panel-applets
 Version: 0.1
 Release: 1
 License: GPLv2
-Group: System/UI
+Group: System/System Control
 BuildArch: noarch
 URL: https://github.com/nemomobile/nemo-control-panel-applets
 Source0: %{name}-%{version}.tar.bz2
+BuildRequires: cmake
 Requires: nemo-control-panel
 
 %description
@@ -21,24 +22,25 @@ Nemo Mobile QML control panel applets
 %setup -q -n %{name}-%{version}
 
 %build
-
+cmake -DCMAKE_INSTALL_PREFIX=%{_prefix} .
+make
 
 %install
 rm -rf %{buildroot}
-%make_install LIBDIR=%{_libdir} DATADIR=%{_datadir}
+%make_install
 
 %clean
 rm -rf %{buildroot}
 
 %package -n nemo-control-panel-common
 Summary: Data shared by control panel applets
-Group: System/UI
+Group: System/System Control
 %description -n nemo-control-panel-common
 %{summary}
 
 %package -n nemo-control-panel-applet-power
-Summary:    Power control panel applet
-Group:      System/UI
+Summary: Power control panel applet
+Group: System/System Control
 Requires: contextkit-qml, contextkit-plugin-power
 Requires: nemo-control-panel-common = %{version}
 %description -n nemo-control-panel-applet-power
