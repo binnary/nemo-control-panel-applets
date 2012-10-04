@@ -129,6 +129,7 @@ Page {
                             visible: isChg.value
                             height: parent.height
                             fillMode: Image.PreserveAspectFit
+                            sourceSize: undefined
                             anchors {
                                 verticalCenter: parent.verticalCenter
                                 right: parent.right
@@ -173,7 +174,7 @@ Page {
                             visible: !isOnBat.value
                             height: parent.height
                             fillMode: Image.PreserveAspectFit
-                            sourceSize { height: height; width: width }
+                            sourceSize: undefined
                             anchors {
                                 verticalCenter: parent.verticalCenter
                                 right: parent.right
