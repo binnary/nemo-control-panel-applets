@@ -1,7 +1,7 @@
 Summary: Nemo mobile control panel plugins
 Name: nemo-control-panel-applets
 Version: 0.1
-Release: 1
+Release: 7
 License: GPLv2
 Group: System/System Control
 BuildArch: noarch
@@ -41,8 +41,11 @@ Group: System/System Control
 %package -n nemo-control-panel-applet-power
 Summary: Power control panel applet
 Group: System/System Control
-Requires: contextkit-qml, contextkit-plugin-power
+Requires: nemo-qml-plugin-contextkit, contextkit-plugin-power
+Requires: nemo-control-panel
 Requires: nemo-control-panel-common = %{version}
+Obsoletes: meegotouchcp-battery <= 0.21.13
+Provides: meegotouchcp-battery = 0.21.14
 %description -n nemo-control-panel-applet-power
 %{summary}
 
