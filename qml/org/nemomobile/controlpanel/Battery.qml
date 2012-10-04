@@ -64,6 +64,10 @@ Item {
             duration: self.animationPeriod / 4
             easing { type: Easing.InOutQuad }
         }
+        onRunningChanged: {
+            if (!running)
+                barColor = levelColor(self.percentage)
+        }
     }
     onPercentageChanged: {
         if (!isCharging) {
