@@ -1,4 +1,4 @@
-MEDIADIR:=$(INSTALL_PREFIX)/share/themes/blanco/meegotouch
+MEDIADIR:=$(DATA_DIR)/themes/blanco/meegotouch
 IMGDIR:=$(MEDIADIR)/icons
 
 install: install-power
