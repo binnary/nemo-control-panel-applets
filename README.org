@@ -1,0 +1,14 @@
+* Nemo Mobile QML control panel applets
+
+  Repository for pure QML control panel applets. If some native
+  functionality is required put it into separate native package.
+
+** Applets
+
+*** Power
+    
+    Provides information about battery, charger, approx. remaining
+    charging and usage time.
+
+**** TODO Add power consumption information
+
