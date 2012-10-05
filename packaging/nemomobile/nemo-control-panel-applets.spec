@@ -1,6 +1,6 @@
 Summary: Nemo mobile control panel plugins
 Name: nemo-control-panel-applets
-Version: 0.1.1
+Version: 0.1.2
 Release: 1
 License: GPLv2
 Group: System/System Control
@@ -27,9 +27,6 @@ make
 %install
 rm -rf %{buildroot}
 %make_install
-
-%clean
-rm -rf %{buildroot}
 
 %package -n nemo-control-panel-common
 Summary: Data shared by control panel applets
