@@ -13,7 +13,7 @@ Requires: nemo-control-panel
 %description
 Nemo Mobile QML control panel applets
 
-%define qml_dir %{_libdir}/qt4/imports
+%define qml_dir %{_libdir}/qt5/imports
 %define plugins_dir %{_datadir}/duicontrolpanel
 %define shortcuts_dir %{_libdir}/duicontrolpanel
 
